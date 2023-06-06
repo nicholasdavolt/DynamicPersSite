@@ -18,10 +18,21 @@ namespace DynamicPersSite.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Portfolio()
         {
             return View();
         }
+        public IActionResult Links()
+        {
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
