@@ -1395,6 +1395,14 @@ section {
   color: #1c88ba;
 }
 
+.contact .info-item h3 {
+    padding: 0;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #1c88ba;
+}
+
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;

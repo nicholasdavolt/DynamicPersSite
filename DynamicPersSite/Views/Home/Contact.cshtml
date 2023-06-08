@@ -1,6 +1,7 @@
-﻿@{
+﻿@model DynamicPersSite.Models.ContactViewModel
+
+@{
     ViewData["Title"] = "Contact";
-    ViewData["BodyClass"] = "page-portfolio";
 }
 
 <main id="main">
@@ -18,11 +19,6 @@
         </div>
     </div><!-- End Breadcrumbs -->
     <!-- ======= Contact Section ======= -->
-    <section id="under-construction" class="pt-0 mt-0 mb-1">
-        <div class="row gy-4 text-center bg-danger p-5">
-            <p class="under-construction-message">Contact form is currently under construction. Please reach out via LinkedIn or Email</p>
-        </div>
-    </section>
 
 
     <section id="contact" class="contact">
@@ -47,28 +43,35 @@
 
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
 
-                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                    <form asp-action="Contact" class="php-email-form">
+                            <div class="row">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="col-md-6 form-group">
+                                    
+                                    <input asp-for="Name" class="form-control" id="name" placeholder="Your Name" />
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+
+                                <input asp-for="Email" class="form-control" id="email" placeholder="Email" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
                             </div>
-                            <div class="col-md-6 form-group mt-3 mt-md-0">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                            <div class="form-group mt-3">
+
+                            <input asp-for="Subject" class="form-control" id="subject" placeholder="Subject" />
+                                <span asp-validation-for="Subject" class="text-danger"></span>
                             </div>
-                        </div>
-                        <div class="form-group mt-3">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group mt-3">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                        </div>
-                        <div class="my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                        </div>
-                        <div class="text-center"><button type="submit">Send Message</button></div>
-                    </form>
+                            <div class="form-group mt-3">
+                                
+                                <textarea asp-for="Message" class="form-control" placeholder="Message"></textarea>
+                                <span asp-validation-for="Message" class="text-danger"></span>
+                            </div>
+                            <div class="form-group text-center">
+                            <input type="submit" value="Submit" class="btn btn-primary col-md-6" />
+                            </div>
+                        </form>
+                   
 
                 </div><!-- End Contact Form -->
 
@@ -78,3 +81,41 @@
     </section><!-- End Contact Section -->
 
 </main><!-- End #main -->
+
+
+
+@section scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+
+
+
+@*<form asp-action="Contact" class="php-email-form">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <input asp-for="Name" class="form-control" id="name" placeholder="Your Name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="col-md-6 form-group mt-3 mt-md-0">
+
+            <input asp-for="Email" class="form-control" id="email" placeholder="Your Email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group mt-3">
+
+        <input asp-for="Subject" class="form-control" id="subject" placeholder="Subject" />
+        <span asp-validation-for="Subject" class="text-danger"></span>
+    </div>
+    <div class="form-group mt-3">
+
+        <textarea asp-for="Message" class="form-control" placeholder="Message" rows="5"></textarea>
+        <span asp-validation-for="Message" class="text-danger"></span>
+    </div>
+    <div class="form-group text-center">
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </div>
+</form>*@
