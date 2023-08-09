@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using MimeKit;
 using MailKit.Net.Smtp;
-using static Org.BouncyCastle.Math.EC.ECCurve;
+
 
 namespace DynamicPersSite.Controllers
 {
