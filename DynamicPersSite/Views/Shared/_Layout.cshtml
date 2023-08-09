@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon-16x16.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="~/assets/img/favicon-16x16.png" rel="icon">
+  <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- FontAwesome Icons -->
   <script src="https://kit.fontawesome.com/e8ddeadb44.js" crossorigin="anonymous"></script>
@@ -21,12 +21,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
     <link href="~/assets/css/main.css" rel="stylesheet">
@@ -60,7 +60,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="/" class="active">Home</a></li>          
+          <li><a href="/">Home</a></li>          
           <li><a asp-action="Portfolio" asp-controller="Home">Portfolio</a></li>
           <li><a asp-action="Links" asp-controller="Home">Links</a></li>        
           <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
@@ -85,8 +85,8 @@
             </a>
             <p>For further information please reach out via the contact page, or the social media links below</p>
             <div class="social-links d-flex  mt-3">
-                <a href="https://www.linkedin.com/in/nick-davolt-06498a131/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                <a href="https://github.com/nicholasdavolt" class="github"><i class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/nick-davolt-06498a131/" class="linkedin" target="_blank" rel="noreferrer"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://github.com/nicholasdavolt" class="github" target="_blank" rel="noreferrer"><i class="bi bi-github"></i></a>
             </div>
           </div>
 
@@ -117,15 +117,17 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/vendor/aos/aos.js"></script>
-  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/vendor/aos/aos.js"></script>
+    <script src="~/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   
 
   <!-- Template Main JS File -->
-  <script src="/assets/js/main.js"></script>
+    <script src="~/assets/js/main.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 
